@@ -25,7 +25,12 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-
+    public void resetScore(View view) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
+    }
 
     /**
      * Add Score for Team A
@@ -50,17 +55,17 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addOneForTeamB(View view) {
         scoreTeamB++;
-        displayForTeamB(scoreTeamA);
+        displayForTeamB(scoreTeamB);
     }
 
     public void addTwoForTeamB(View view) {
         scoreTeamB += 2;
-        displayForTeamB(scoreTeamA);
+        displayForTeamB(scoreTeamB);
     }
 
     public void addThreeForTeamB(View view) {
         scoreTeamB += 3;
-        displayForTeamB(scoreTeamA);
+        displayForTeamB(scoreTeamB);
     }
 
 
